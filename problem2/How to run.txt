@@ -1,0 +1,17 @@
+First open SWI-Prolog application, you'll be greeted with a standard Prolog compiler. On the top left, click file on the toolbar, followed by edit. A new window will pop-up. From here, go to the location in your system where you have extracted the file, and select the .pl file for respective problem. A new window will pop-up. Here, you have to go to the toolbar, click Compile, followed by Compile buffer. Return to your standard compiler and start testing the given testcases.
+
+problem2a)
+	Here, we have a function sublist(X,Y), which can check wether X is a sublist of Y. Use the problem2a.txt file to see some test cases; just copy the test case line, paste in compiler after compiling the source file, and see the working of the program. This text file contains test cases with their expected output.
+Explanation: sublist predicate calls a inner predicate, sublist_chk, which takes a copy of sublist, and travels through the complete list recursively. Whenever the first element of sublist matches the main list traversal, it starts comparing, until our original sublist has been completely travelled->Gives true, or if our original list becomes []->Gives false, or when the sublist can't be traversed completely, due to different elements, it goes to copy, and recalls recursion on the remaining list.
+
+problem2b)
+	Here, we have a function has_triplicate(List), which can check that wether the list contains three values of same kind. It'll also prints the element which has three similar values ahead of it. Use problem2b.txt file to see some test cases; just copy the test case line, paste in compiler after compiling the source file, and see the working of the program. This text file contains test cases with their expected output. 
+Explanation: The has_triplicate funtion calls has_duplicate(E,List), which checks wether the List contains atleast two element E, which it does by calling the has_member(E,List) function, ehich checks wether the List contains atleast one element E. Because we're checking for atleast 3 elements, if there are 4 similar element, the system prints this element twice, corressponding to the first and second instance.
+
+problem2c)
+	Here, we have a function remove_nth(N,X,Y), which removes the Nth element from the list X and returns the new list at Y, which has the element removed. Use problem2c.txt file to see some test cases; just copy the test case line, paste in compiler after compiling the source file, and see the working of the program. This text file contains test cases with their expected output. 
+Explanation: The remove_nth(N,X,Y) calls upon itself, while traversing the list, simultaneously decreasing N, till N becomes 1. At this stage, the element at the Nth position is the Head of the new list and tail is appended to the rest of the traversed list.
+
+problem2d)
+	Here, we have a function remove_every_other(X,Y), which takes a list X, and return a lsit Y, with every other element removed. Use problem2c.txt file to see some test cases; just copy the test case line, paste in compiler after compiling the source file, and see the working of the program. This text file contains test cases with their expected output. 
+Explanation: When this function gets a [] list, it returns the same, when it gets a list with a single element, it returns the same, otherwise, it recursively calls itself, while removing every second element of the head(X,_), so that it removes every pther element.

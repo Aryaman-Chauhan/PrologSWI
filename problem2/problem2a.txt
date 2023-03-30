@@ -1,0 +1,14 @@
+TestCase1:
+sublist([1,2],[a,c,g,2,5,d,2,d,1,g,h,1,2,4,23,12]).
+Output:
+true.
+
+TestCase2:
+sublist([a,b],[c,a,f,d,a,b,c,d,e,f,a,c,b,a,b]).
+Output:
+true.
+
+TestCase3:
+sublist([1,a],[1,s,g,3,g,56,s,1,d,3,a,1]).
+Output:
+false.

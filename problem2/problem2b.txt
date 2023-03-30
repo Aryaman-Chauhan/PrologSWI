@@ -1,0 +1,26 @@
+TestCase1:
+has_triplicate([1,1,4,5,32,54,2,5,2,1,2]).
+Output:
+1 has atleast 3 copies
+true ;
+2 has atleast 3 copies
+true ;
+false.
+
+TestCase2:
+has_triplicate([1,2,3,2,3,2,3,3,2]).
+Output:
+2 has atleast 3 copies
+true ;
+3 has atleast 3 copies
+true ;
+2 has atleast 3 copies
+true ;
+3 has atleast 3 copies
+true ;
+false.
+
+TestCase3:
+has_triplicate([1,1,2,3,4,2,3,4,5,5,6,7]).
+Output:
+false.

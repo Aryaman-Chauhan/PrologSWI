@@ -1,0 +1,49 @@
+//Ouptut generated for the graph defined in the program file.(which can be edited and used also).
+
+Input:-
+-------
+	findPath(a,d,P,L).
+Output:-
+--------
+P = [a, d],
+L = 5 ;
+P = [a, b, c, d],
+L = 16 ;
+P = [a, b, e, f, c, d],
+L = 16 ;
+P = [a, c, d],
+L = 17 ;
+no
+true.
+
+Input:-
+-------
+	findPath(a,c,P,L).
+Ouptut:=
+--------
+P = [a, c],
+L = 9 ;
+P = [a, d, c],
+L = 13 ;
+P = [a, b, c],
+L = 8 ;
+P = [a, b, e, f, c],
+L = 8 ;
+no
+true.
+
+Input:-
+-------
+	 findPath(a,g,P,L).
+Output:-
+--------
+P = [a, d, c, g],
+L = 15 ;
+P = [a, b, c, g],
+L = 10 ;
+P = [a, b, e, f, c, g],
+L = 10 ;
+P = [a, c, g],
+L = 11 ;
+no
+true.

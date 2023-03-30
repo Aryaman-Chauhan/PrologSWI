@@ -1,0 +1,45 @@
+First open SWI-Prolog application, you'll be greeted with a standard Prolog compiler. On the top left, click file on the toolbar, followed by edit. A new window will pop-up. From here, go to the location in your system where you have extracted the file, and select the .pl file(Prolog Source) for respective problem. A new window will pop-up. Here, you have to go to the toolbar, click Compile, followed by Compile buffer. Return to your standard compiler and start testing the given testcases.
+
+Use problem1.txt file to see some test cases; just copy the test case line, paste in compiler after compiling the source file, and see the working of the program. This text file contains test cases with their expected output. 
+
+Question 1:-
+
+Logic explanation:-
+--------------------
+
+The program needs the undirected graph to be implemented in the form
+of "weight" predicates, where:-
+    
+    weight(p,q,5).
+
+the above predicate defines that there exists a path between 'p' and
+'q' with a weight of 5. By this we can say define a full graph. In our program,
+we have defined a sample graph from which we will show 2 examples from it.
+Note:- The predicates of weight can be edited to define the graph, but nothing else should
+be edited.
+
+"pathexists"(/2 function) function checks if there exists a path between 2 nodes,
+irrespective of the way in which they are declared.(with either atoms coming in either of the places)
+
+"path" function takes in the Start, Goal node, and the variables to store the path and
+length, also it takes in a temporary variable to store the path it visited and the lenght, whose contents
+will be initialized to the actual variables which are passed at the end of the algorithm.
+
+The "path" funciton recursively calls itself until it find the goal node. Each time, it check its neighbouring
+node and passes this node as the start node to the next recursive call. By this, the function will return true if
+can reach the goal node, and false if it doesn't.
+
+Also "path" keeps track of the nodes it visited using a temporary list, and each time in the recursion, it checks
+whether the next node it visited contains the node or not. If the node is already present in this temporary list,
+the function returns false on this path and continues on other possible path.
+
+Then when it reaches the goal node, the path list is initialized to the temporary list and passed on to the cost function.
+The "cost" function takes every 2 elements in a sequence from the path list and adds the weight to get the total weight which is initialized
+to the lenght variable passed on by the user.
+
+findPath will be the wrapper class calling "path" function and returning the path and lenght variable and returning "no"
+if the there doesn't exist anymore alternate paths.
+
+Syntax:-
+    
+    findPath(Start_node,Goal_node,Path, Length).
