@@ -1,4 +1,5 @@
 # PrologSWI Problems
+This Repository is ARCHIVED!!!
 Prolog is a tool which has Logical Statements, which it solves using Resolution Refutation Method.
 
 Here, I have dealt with two Problems, seperated into folders, with the following problem statement.
